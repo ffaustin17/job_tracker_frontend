@@ -112,7 +112,7 @@ export default function DashboardPage(){
 
       <JobTabs activeTab={activeTab} onTabChange={setActiveTab} tabs={tabs}/>
       <JobGrid jobs={jobs} loading={loading} activeTab={activeTab}/>
-      <Pagination/>
+      <Pagination page={page} totalPages={totalPages} onPageChange={setPage}/>
     </div>
   );
 }
