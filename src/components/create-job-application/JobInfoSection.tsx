@@ -3,7 +3,7 @@ import FormSelect from "./FormSelect";
 
 const jobStatuses = ['PENDING', 'APPLIED', 'INTERVIEW_SCHEDULED', 'REJECTED'];
 
-type JobStatus = typeof jobStatuses[number];
+//type JobStatus = typeof jobStatuses[number];
 
 export default function JobInfoSection({ register, errors }){
     

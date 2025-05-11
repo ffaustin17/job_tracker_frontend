@@ -31,7 +31,9 @@ const statusMap: Record<string, string|null> = {
 export default function DashboardPage(){
   const [jobs, setJobs] = useState<Job[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [page, setPage] = useState<number>(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [totalPages, setTotalPages] = useState<number>(0);
   const [activeTab, setActiveTab] = useState<string>("All Jobs");
   const [searchTerm, setSearchTerm] = useState<string>("");
