@@ -1,11 +1,19 @@
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
+import { JobApplicationFormInputs } from "../../schemas/JobFormSchemas";
 
 const jobStatuses = ['PENDING', 'APPLIED', 'INTERVIEW_SCHEDULED', 'REJECTED'];
 
+
+type JobInfoSectionProps = {
+    register: UseFormRegister<JobApplicationFormInputs>;
+    errors: FieldErrors<JobApplicationFormInputs>;
+};
+
 //type JobStatus = typeof jobStatuses[number];
 
-export default function JobInfoSection({ register, errors }){
+export default function JobInfoSection({ register, errors } : JobInfoSectionProps){
     
     return (
         <fieldset className=" p-4 rounded-md shadow-md bg-slate-900">
